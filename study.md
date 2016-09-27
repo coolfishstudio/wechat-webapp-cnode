@@ -406,3 +406,5 @@ redictDetail: function (e) {
 [第三弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/750974)
 
 [第四弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/751826)
+
+[第五弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/752421)
