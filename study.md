@@ -398,7 +398,11 @@ redictDetail: function (e) {
 最后感谢：cnode社区和博卡君
 
 附上 博卡君的教程
+
 [全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/750055)
+
 [博卡君的应用号（小程序）开发教程首发第二弹！（0923）](https://my.oschina.net/wwnick/blog/750495)
+
 [第三弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/750974)
+
 [第四弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/751826)
