@@ -1,0 +1,43 @@
+<!--detail.wxml-->
+<view class="detail-main">
+  <view class="detail-post">
+    <view class="detail-post-header">
+      <view class="detail-post-title">{{ detail.title }}</view>
+    </view>
+    <view class="detail-post-meta">
+      <view class="detail-post-avatar">
+        <image class="detail-post-avatar-img" mode="scaleToFill" src="{{ detail.author.avatar_url }}"></image>
+      </view>
+      <view class="detail-post-info">
+        <view class="detail-post-author-name">{{ detail.author.loginname }}</view>
+        <view class="detail-post-time">楼主 发表于{{ detail.create_at }}</view>
+      </view>
+    </view>
+    <view class="detail-post-content">
+      <text class="content-info">{{ detail.content }}</text>
+    </view>
+    <view class="detail-post-comment">
+      <view class="detail-post-comment-title">评论</view>
+      <view class="detail-post-comment-list">
+        <block wx:for="{{ detail.replies }}">
+          <view class="detail-post-comment-item" index="{{index}}" id="{{item.id}}">
+            <view class="detail-post-comment-avatar">
+              <image class="detail-post-comment-avatar-img" mode="scaleToFill" src="{{ item.author.avatar_url }}"></image>
+            </view>
+            <view class="detail-post-comment-info">
+              <view class="detail-post-comment-author-name">{{ item.author.loginname }}</view>
+            </view>
+            <view class="detail-comment-content">
+              <text class="detail-comment-text">{{ item.content }}</text>
+              <view class="detail-post-comment-time">{{index + 2}}楼 发表于{{ item.create_at }}</view>
+            </view>
+          </view>
+        </block>      
+      </view>
+    </view>
+  </view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/topics/topics",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "backgroundColor":"#fff",
+    "navigationBarBackgroundColor":"#000",
+    "navigationBarTitleText":"CNODE 应用号版",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar":{
+    "color":"#272636",
+    "selectedColor":"#80bd01",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list":[{
+      "pagePath":"pages/topics/topics",
+      "text":"首页",
+      "iconPath":"images/tabBar/my.png",
+      "selectedIconPath":"images/tabBar/my_hl.png"
+    },{
+      "pagePath":"pages/index/index",
+      "text":"我的",
+      "iconPath":"images/tabBar/list.png",
+      "selectedIconPath":"images/tabBar/list_hl.png"
+    }]
+  }
+}

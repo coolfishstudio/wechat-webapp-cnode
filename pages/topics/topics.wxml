@@ -1,0 +1,38 @@
+<!--posts.wxml-->
+<view class="topics-main">
+  <view class="top-bar">
+    <view class="top-bar-item" id="all" catchtap="onTapTag">全部</view>
+    <view class="top-bar-item" id="good" catchtap="onTapTag">精华</view>
+    <view class="top-bar-item" id="share" catchtap="onTapTag">分享</view>
+    <view class="top-bar-item" id="ask" catchtap="onTapTag">问答</view>
+    <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>
+  </view>
+  <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{postsList}}">
+      <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
+        <view class="author">
+          <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
+          <view class="author-name">{{item.author.loginname}}</view>
+          <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+          <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+        <view class="posts-title">{{item.title}}</view>
+        <view class="bar-info">
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/reply.png"></image>
+            <view class="bar-info-item-number">{{item.reply_count}}</view>
+          </view>
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+            <view class="bar-info-item-number">{{item.visit_count}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
