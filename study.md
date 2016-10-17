@@ -1,11 +1,15 @@
-微信应用号入门实践之cnode社区版
+> 微信应用号入门实践之cnode社区版
 
 首先感谢cnode社区提供的api，本次实现了简单的cnode社区应用号制作。
 实现了数据的读取、展示，
 实现了简单的布局，
 实现了下一页功能。
-![首页列表](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/1.png)
-![内容详情](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/2.png)
+
+放上我的github地址
+https://github.com/coolfishstudio/wechat-webapp-cnode
+
+![首页列表](//dn-cnode.qbox.me/Fo4zG2Vfe50352POPZYXv8Ls0Jcc)
+![内容详情](//dn-cnode.qbox.me/Fl7TiaW13s541lHZ7Crq7NxKshqG)
 
 下面就说说我做这个的过程，不足之处，请多多指教，只愿为进步。
 
@@ -18,11 +22,11 @@
 #### 注：现在官方的工具支持无appid创建项目。
 
 ##### 1.打开开发者工具，选择“添加项目”
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/3.png)
+![](//dn-cnode.qbox.me/FsqxRNIzNDyzItbl-vhAFPr0J5t2)
 ##### 2.选择无appid，填写地址，创建项目
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/4.png)
+![](//dn-cnode.qbox.me/Fp098WRAyxgJ415Dt_f0YGhjIMHr)
 ##### 3.创建成功，看到默认的Demo项目页面
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/5.png)
+![](//dn-cnode.qbox.me/FuvUmKfcUu8MeLc4eeuwNBfkbfMC)
 
 ## 2.配置
 默认的项目里已经没有关于tabBar的配置信息，所以为了学习，我把这个配置进行了修改。
@@ -56,7 +60,7 @@
 
 ```
 增加了tabBar, 查看调试
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/6.png)
+![](//dn-cnode.qbox.me/Fl-OboTDeCULcPbs5BiM81nj_Xrc)
 看界面是如此的简陋，为此针对tabBar参考官方说明进行了简单的美化。
 
 ```
@@ -79,7 +83,7 @@
   }
 ```
 效果如图
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/7.png)
+![](//dn-cnode.qbox.me/FjzwAq6RH5TstCXIYb5ZIt6z3cuj)
 最后根据文档，对默认页面的窗口表现进行了修改
 
 ```
@@ -93,7 +97,7 @@
   },
 ```
 效果如图
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/8.png)
+![](//dn-cnode.qbox.me/Fl4S7o2m50JXXt1xebSgq1pNR_iX)
 整体配置文件为
 
 ```
@@ -194,7 +198,7 @@ Page({
 }
 ```
 最后效果如图
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/9.png)
+![](//dn-cnode.qbox.me/FiunQ0XhES_sidHnkBN9YxABF2iI)
 
 ### 2.创建请求
 根据文档[请求数据](https://mp.weixin.qq.com/debug/wxadoc/dev/api/network-request.html?t=1474887499445)，在util文件夹内创建一个api.js文件，专门进行数据请求处理。
@@ -250,14 +254,14 @@ Page({
 });
 ```
 效果如图
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/10.png)
+![](//dn-cnode.qbox.me/FoonyAMQBgqDpiTKZshoB3ZmnUEU)
 成功拿到了数据。
 
 ### 3.完善首页列表
 拿到了数据，也能修改界面，那么就直接完善这个首页吧
 
 代码就不放了，直接上图
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/11.png)
+![](//dn-cnode.qbox.me/Fo4zG2Vfe50352POPZYXv8Ls0Jcc)
 我认为这里值得说的大概只有loading、循环、传参、下一页和页面跳转了。
 #### 1.loading
 ```
@@ -298,7 +302,7 @@ Page({
 ```
 
 附上一个没有样式的列表展现
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/12.png)
+![](//dn-cnode.qbox.me/FkoTZY1Q9kqOWa1-e70FHifzHVo7)
 
 #### 3.传参，实现tab切换
 根据cnode的api可以知道通过tab不同的值，获得到不同标签下的内容列表。
@@ -381,7 +385,7 @@ redictDetail: function (e) {
 ```
 ### 4.实现详情页
 同样的原理，创建detail文件，并注册，获取数据，并美化页面。
-![](http://7xqxfk.com1.z0.glb.clouddn.com//xiaoyingyong/cnode/13.png)
+![](//dn-cnode.qbox.me/FmJ5n5-t3gLCfFQTpbzIBS1_ag2L)
 
 ### 5.总结
 * 微信小应用页面的脚本逻辑在是在JsCore中运行，JsCore是一个没有窗口对象的环境，所以不能再脚本中使用window，也无法在脚本中操作组件
@@ -408,3 +412,16 @@ redictDetail: function (e) {
 [第四弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/751826)
 
 [第五弹！全球首个微信应用号开发教程！通宵吐血赶稿，每日更新！](https://my.oschina.net/wwnick/blog/752421)
+
+[第六弹！全球首个微信小程序（应用号）开发教程！通宵吐血赶稿！](https://my.oschina.net/wwnick/blog/753597)
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+总结一下我遇到的问题
+1.页面没有注册 那么 template 模版无法传递数据 拿不到动态数据 但是能使用wxss
+2.进度条注意右侧百分号 100%的时候 进度条缩短
+3.轮播图加上属性vertical="vertical/horizontal" 可以修改布局方向，文档没说
+4.有关icon，文档提供默认的只有9个，实际目前测出有15个 success, info, warn, waiting, safe_success, safe_warn,success_circle, success_no_circle, waiting_circle, circle, download,info_circle, cancel, search, clear
+
+最后
+新版的已经不支持100%了 刚刚测试 0.10.101100 版本 100% 失效了  
+不过 给scroll-view 的页面里加样式  
+page {height: 100%} 依旧可以使用100%  
