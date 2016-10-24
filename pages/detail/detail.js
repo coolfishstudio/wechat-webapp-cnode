@@ -1,12 +1,13 @@
 // posts.js
 var Api = require('../../utils/api.js');
 var util = require('../../utils/util.js');
-
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
   data: {
     title: '话题详情',
     detail: {},
-    hidden: false
+    hidden: false,
+    wxParseData:[]
   },
   onLoad: function (options) {
     this.fetchData(options.id);
@@ -26,7 +27,8 @@ Page({
             return item;
           })
         self.setData({
-          detail: res.data.data
+          detail: res.data.data,
+          wxParseData: WxParse('md',res.data.data.content)
         });
         setTimeout(function () {
           self.setData({
