@@ -7,6 +7,14 @@ Page({
     title: '话题列表',
     postsList: [],
     hidden: false,
+    topBarItems: [
+      // id name selected 选中状态
+      {id:'all',name:'全部',selected:true},
+      {id:'good',name:'精华',selected:false},
+      {id:'share',name:'分享',selected:false},
+      {id:'ask',name:'问答',selected:false},
+      {id:'job',name:'招聘',selected:false}
+    ],
     page: 1,
     tab: 'all'
   },
@@ -20,6 +28,19 @@ Page({
   onTapTag: function (e) {
     var self = this;
     var tab = e.currentTarget.id;
+    var topBarItems = self.data.topBarItems;
+    // 切换topBarItem 
+    for (var i = 0;i<topBarItems.length;i++) {
+      if(tab == topBarItems[i].id) {
+          topBarItems[i].selected = true;
+      } else {
+          topBarItems[i].selected = false;
+      }
+    }
+    self.setData({
+      topBarItems:topBarItems
+    })
+
     self.setData({
       tab: tab
     });

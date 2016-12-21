@@ -1,11 +1,14 @@
 <!--posts.wxml-->
 <view class="topics-main">
   <view class="top-bar">
-    <view class="top-bar-item" id="all" catchtap="onTapTag">全部</view>
+    <block wx:for="{{topBarItems}}">
+        <view class="top-bar-item {{item.selected ? 'top-bar-item-Selected': '' }}" catchtap="onTapTag" id="{{item.id}}">{{item.name}}</view>
+    </block>
+    <!--<view class="top-bar-item" id="all" catchtap="onTapTag">全部</view>
     <view class="top-bar-item" id="good" catchtap="onTapTag">精华</view>
     <view class="top-bar-item" id="share" catchtap="onTapTag">分享</view>
     <view class="top-bar-item" id="ask" catchtap="onTapTag">问答</view>
-    <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>
+    <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>-->
   </view>
   <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
     <block wx:for="{{postsList}}">
