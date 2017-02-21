@@ -1,3 +1,4 @@
+<import src="../../wxParse/wxParse.wxml"/>
 <!--detail.wxml-->
 <view class="detail-main">
   <view class="detail-post">
@@ -14,7 +15,11 @@
       </view>
     </view>
     <view class="detail-post-content">
-      <text class="content-info">{{ detail.content }}</text>
+      <!--<text class="content-info">{{ detail.content }}</text>-->
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData}}"/>
+      </view>
+
     </view>
     <view class="detail-post-comment">
       <view class="detail-post-comment-title">评论</view>
