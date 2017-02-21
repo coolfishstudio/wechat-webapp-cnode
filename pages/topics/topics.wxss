@@ -9,6 +9,8 @@
   top:0;
   z-index:1;
 }
+
+
 .top-bar-item {
   display:inline-block;
   width: 20%;
@@ -17,6 +19,12 @@
   line-height: 36px;
   font-size: 14px;
 }
+
+.top-bar-item-Selected {
+  background: #80bd01;
+  color: white;
+}
+
 .posts-list {
   margin-top: 36px;
 }
